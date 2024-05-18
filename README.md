@@ -1,20 +1,23 @@
-# PersonAge Contract
+# BasicToken Smart Contract
 
-## Description
-The PersonAge contract is a simple Solidity smart contract for age verification. It ensures that the user is at least 18 years old to access certain functions.
+## Overview
+The `BasicToken` contract is a simple ERC-20-like token on the Ethereum blockchain. It includes basic functionalities to create a token, transfer it, and ensure transactions are safe and valid.
 
 ## Features
-- **Age Verification**: Validates that the age provided is 18 or older.
-- **Pure Function**: The `verifyAge` function is a pure function, meaning it does not modify or read the contract's state.
+- **Token Information**: Includes token name, symbol, and decimals.
+- **Total Supply**: Defines the total number of tokens in existence.
+- **Balance Tracking**: Keeps track of token balances for each address.
+- **Transfer Event**: Emits an event for every token transfer.
 
-## Usage
-To use the `verifyAge` function, simply call it with an age parameter. If the age is less than 18, the transaction will revert with an error message.
+## Functions
+- **Constructor**: Sets up the token with initial values and assigns the total supply to the creator's address.
+- **transfer**: Allows token holders to transfer tokens to another address, with checks for valid transactions.
+- **assertTest**: A test function that demonstrates the use of `assert` which will always fail.
+- **revertTest**: A test function that demonstrates the use of `revert` with a custom error message.
+- **requireTest**: A test function that demonstrates the use of `require` to validate input.
 
-## Requirements
-- Solidity ^0.8.0
+## Deployment
+To deploy this contract, compile it using a Solidity compiler and deploy it to the Ethereum network using a wallet or a deployment tool like Truffle or Hardhat.
 
 ## Author
 Regie R. Prieto
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
